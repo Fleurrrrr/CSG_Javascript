@@ -119,7 +119,7 @@ function draw() {
   if (jos.wordtGeraakt(alice)) {
     noLoop();
   }
-  if (jos.gehaald) {
+  if (jos.gehaald){
     background('green');
     fill('white');
     text("Je hebt gewonnen!",30,300);

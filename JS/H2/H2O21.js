@@ -27,6 +27,12 @@ var cirkel = {
 
 function preload() {
   achtergrond = loadImage("images/choco.jpg");
+    if (afstandMuisCirkel <= this.straal && mouseIsPressed == true) {
+      this.alpha *= 0.8;
+      this.kiesEenPlek();
+      this.aantalRaak++;
+    }
+
 }
 
 function setup() {

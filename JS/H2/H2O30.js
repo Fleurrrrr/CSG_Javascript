@@ -31,6 +31,8 @@ function setup() {
   boom1 = new Boom(1,'olive',130);
   boom2 = new Boom(5,'forestgreen',300);
   boom3 = new Boom(3,'yellowgreen',600);
+  boom4 = new Boom(3,'pink',450);
+  boom5 = new Boom(2,'white',200);
 }
 
 function draw() {
@@ -40,8 +42,12 @@ function draw() {
   boom1.teken();
   boom2.teken();
   boom3.teken();
+  boom4.teken();
+  boom5.teken();
   
   boom1.groei();
   boom2.groei();
   boom3.groei();
+  boom4.groei();
+  boom5.groei();
 }
