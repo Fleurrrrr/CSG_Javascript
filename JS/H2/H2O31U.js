@@ -1,15 +1,14 @@
 class DobbelSteen {
-  constructor(x) {
-    this.x = x;
-    this.y = 15;
-    this.grootte = 200;
-    this.diameterOgen = 50;
-    this.ogen = null;
-    this.R = null;
-    this.G = null;
-    this.B = null;
+  constructor(x){
+  this.x= 25;
+  this.y= 25;
+  this.grootte= 200;
+  this.diameterOgen= 50;
+  this.ogen= null;
+  this.R = null;
+  this.G = null;
+  this.B = null;
   }
-
   gooi() {
     this.ogen = floor(random(0,6)) + 1;
 
