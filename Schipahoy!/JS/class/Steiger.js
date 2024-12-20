@@ -1,7 +1,7 @@
 class Steiger {
     constructor() {
-         this.x = canvas.width - 100;
-         this.y = canvas.height - 100;
+         this.x = windowWidth - 300;
+         this.y = windowHeight - 270;
         // this.kleur = 'blue';
          this.lengtesteigertje = 100;
          this.breedtesteigertje = 200;
@@ -25,10 +25,11 @@ class Steiger {
              steigertjeBoven < spelerOnder
          );
      }
-    teken() {
-         push();
-         noStroke();
-         image(steigertje, this.x, this.y, this.breedtesteigertje, this.breedtesteigertje);
-         pop();
-     }
- }
+        teken() {
+            push();
+            noStroke();
+            image(steigertje, this.x, this.y, 300, 350);
+            
+            pop();
+        }
+    }

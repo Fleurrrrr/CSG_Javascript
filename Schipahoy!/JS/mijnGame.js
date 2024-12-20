@@ -9,14 +9,18 @@ var engevis;
 var steigertje;
 var breedtesteigertje
 var lengtesteigertje
+var jebentaf
+var eiland
 
 function preload() {
-    achtergrondmuziek = loadSound("sounds/bensound-groovyhiphop.mp3");
+    achtergrondmuziek = loadSound("sounds/Arr.mp3")
     welkom = loadImage("images/welkom.png");
     bootje1 = loadImage("images/Beginbootje.png");
     vis1 = loadImage("images/vis1.png");
     engevis= loadImage("images/Engevis.png");
     steigertje = loadImage("images/steigertje.png");
+    jebentaf = loadImage("images/eindscherm.png");
+    eiland = loadImage("images/gewonnen.png");
 }
 
 function windowResized() {
@@ -32,9 +36,9 @@ function setup() {
     textSize(44);
     textAlign(CENTER,CENTER);  
     frameRate(50);
-    spel = new Spacers();
+    spel = new Schipahoy();
     spel.nieuwSpel();
-    hero = new Hero()
+    hero = new Schip()
 }
 
 function draw() {
@@ -46,17 +50,14 @@ function draw() {
 
 function keyTyped() {
   if (!spel.actief && !spel.levelGehaald) {
-    // begin spel
     spel.actief = true;
     achtergrondmuziek.loop();
   }
-  if ((spel.levelGehaald && !spel.afgelopen) && keyCode == ENTER) {
-    // level gehaald tijdens het spel
+  if (!spel.afgelopen && spel.levelGehaald && keyCode == ENTER) {
     spel.nieuwLevel();
   }
-  if ((spel.afgelopen) && keyCode == 32) {
-    // einde spel => 32 = ENTER 
+  if (spel.afgelopen && keyCode == 32) {
     achtergrondmuziek.stop();
     spel.nieuwSpel();
-  }  
+  }
 }
